@@ -1,0 +1,112 @@
+
+.navbar {
+    background-color: #1a202c; 
+    border-bottom: 1px solid #e5e7eb; 
+    position: relative;
+    z-index: 10;
+    padding: 10px 20px;
+}
+
+.navbar-dark {
+    background-color: #2d3748; 
+    border-bottom: 1px solid #4a5568; 
+}
+
+.navbar .logo img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar .nav-link {
+    color: #e2e8f0;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    color: #2d3748;
+    background-color: #edf2f7; 
+    border-radius: 4px;
+}
+
+.navbar .nav-link.active {
+    color: #2d3748;
+    font-weight: 600;
+    border-bottom: 2px solid #2d3748; 
+}
+
+.navbar .dropdown button {
+    background-color: white;
+    color: #4a5568;
+    border: 1px solid #e5e7eb;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar .dropdown button:hover {
+    background-color: #edf2f7;
+}
+
+.navbar .dropdown-content {
+    display: none;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    border: 1px solid #e5e7eb;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 20;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.navbar .dropdown-link {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.navbar .dropdown-link:hover {
+    background-color: #f7fafc;
+    border-radius: 4px;
+}
+
+.navbar-mobile {
+    display: none;
+}
+
+.navbar-mobile.open {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar .nav-link {
+        padding: 12px 20px;
+    }
+
+    .navbar-mobile {
+        display: block;
+    }
+
+    .navbar .dropdown button {
+        padding: 10px 18px;
+    }
+
+    .navbar .dropdown-content {
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+}
